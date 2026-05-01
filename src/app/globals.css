@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-cormorant: var(--font-cormorant);
+  --font-lato: var(--font-lato);
+
+  --color-gold: #b8963e;
+  --color-gold-light: #d4af5a;
+  --color-gold-dark: #8a6e2a;
+  --color-cream: #faf7f2;
+  --color-dark: #1a1612;
+  --color-dark-mid: #2c2419;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-lato), system-ui, sans-serif;
+  color: #1a1612;
+  background: #ffffff;
+}
+
+.font-serif {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
