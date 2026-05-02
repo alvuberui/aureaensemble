@@ -37,7 +37,7 @@ const acts = [
   },
   {
     num: "07",
-    title: "Bodas en Iglesia",
+    title: "Ceremonias de Boda",
     desc: "Acompañamiento musical para el enlace matrimonial: entrada, firma, comunión y salida, con piezas clásicas y contemporáneas.",
     featured: false,
   },

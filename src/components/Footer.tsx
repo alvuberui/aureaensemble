@@ -8,22 +8,17 @@ const navLinks = [
 
 export default function Footer() {
   return (
+    <>
     <footer className="bg-[#0f0c09] text-white/50 py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-8 border-b border-white/10">
           {/* Brand */}
           <div>
-            <div className="flex flex-col leading-none mb-3">
-              <span
-                className="text-2xl font-light tracking-[0.3em] text-[#b8963e]"
-                style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-              >
-                AUREA
-              </span>
-              <span className="text-xs tracking-[0.5em] text-white/40 uppercase">
-                Ensemble
-              </span>
-            </div>
+            <img
+              src="/Logo_Aurea.png"
+              alt="Aurea Ensemble"
+              className="h-10 w-auto mb-3 brightness-90"
+            />
             <p className="text-sm max-w-xs">
               Música que acompaña los momentos que importan.
             </p>
@@ -49,5 +44,12 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+
+    <div className="fixed bottom-4 right-4 z-40 pointer-events-none">
+      <p className="text-[10px] tracking-wide text-white/70 bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full">
+        Desarrollado por Álvaro Úbeda Ruiz · 2026
+      </p>
+    </div>
+    </>
   );
 }

@@ -5,7 +5,7 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#1a1612]"
     >
       {/* Gradient overlay texture */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60 pointer-events-none" />
 
       {/* Decorative lines */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -13,7 +13,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20 pb-28">
         <p className="text-[#b8963e] text-xs tracking-[0.5em] uppercase mb-8 font-light">
           Música que acompaña
         </p>

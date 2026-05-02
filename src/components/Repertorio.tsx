@@ -17,73 +17,58 @@ type TabData = {
 
 const tabs: TabData[] = [
   {
-    id: "procesiones",
-    label: "Procesiones",
+    id: "cofrade",
+    label: "Cofrade",
     intro:
-      "Marchas procesionales y piezas de acompañamiento para pasos y cofradías.",
+      "Marchas procesionales y piezas para acompañar pasos, cofradías, traslados, vía crucis y actos litúrgicos.",
     tracks: [
-      { title: "Amarguras", composer: "Manuel Font de Anta" },
-      { title: "Pasan los Campanilleros", composer: "Manuel López Farfán" },
-      { title: "La Macarena", composer: "Pedro Morales Muñoz" },
-      { title: "Virgen de la Esperanza", composer: "Antonio Pantión" },
-      { title: "Cristo de la Expiración", composer: "Eduardo Gutiérrez Salas" },
-      { title: "Coronación", composer: "Manuel López Farfán" },
-      { title: "Soleá Dame la Mano", composer: "Abel Moreno" },
-      { title: "Stella Maris", composer: "J. Franco Ribate" },
+      { title: "Aniversario Macareno", composer: "" },
+      { title: "Reina de San Román", composer: "" },
+      { title: "Ave María", composer: "" },
+      { title: "Cachorro Eterno", composer: "" },
+      { title: "Cordero de Dios", composer: "" },
+      { title: "Coronación de la Macarena", composer: "" },
+      { title: "Cristo del Buen Fin", composer: "" },
+      { title: "Cristo en la Alcazaba", composer: "" },
+      { title: "El Mayor Dolor", composer: "" },
+      { title: "Jesús de las Penas", composer: "" },
+      { title: "Lacrimosa", composer: "" },
+      { title: "Madruga Macarena", composer: "" },
+      { title: "Macarena", composer: "Abel Moreno" },
+      { title: "Ossana in Excelsis", composer: "" },
+      { title: "Pasa la Virgen Macarena", composer: "" },
+      { title: "Quinta Angustia", composer: "" },
+      { title: "Tus Dolores Son Mis Penas", composer: "" },
+      { title: "Virgen del Amor entre Naranjos", composer: "" },
     ],
   },
   {
-    id: "liturgico",
-    label: "Litúrgico",
-    intro: "Piezas para la celebración de la liturgia: misas, oficios y actos religiosos.",
+    id: "ceremonias",
+    label: "Ceremonias",
+    intro:
+      "Selección de piezas para bodas en iglesia y actos ceremoniales. Adaptamos el programa a cada momento del enlace.",
     tracks: [
-      { title: "Ave María", composer: "Franz Schubert" },
-      { title: "Panis Angelicus", composer: "César Franck" },
-      { title: "Salve Regina", composer: "Tradicional" },
-      { title: "O Salutaris Hostia", composer: "Tradicional" },
-      { title: "Tantum Ergo", composer: "Gregoriano" },
-    ],
-  },
-  {
-    id: "viacrucis",
-    label: "Vía Crucis",
-    intro: "Piezas meditativas y de recogimiento para acompañar el rezo del Vía Crucis.",
-    tracks: [
-      { title: "Stabat Mater", composer: "Pergolesi" },
-      { title: "Miserere", composer: "Gregorio Allegri" },
-      { title: "O Vos Omnes", composer: "Victoria / Casals" },
-      { title: "Perdona a Tu Pueblo", composer: "Tradicional" },
-    ],
-  },
-  {
-    id: "bodas",
-    label: "Bodas",
-    intro: "Selección de piezas para cada momento del enlace matrimonial en iglesia.",
-    tracks: [
-      { title: "Canon en Re", composer: "Johann Pachelbel", note: "Entrada" },
-      { title: "Marcha Nupcial", composer: "Felix Mendelssohn", note: "Salida" },
-      { title: "Ave María", composer: "Schubert / Gounod", note: "Comunión" },
-      { title: "Air on the G String", composer: "J.S. Bach", note: "Firma" },
-      { title: "A Thousand Years", composer: "Christina Perri", note: "Entrada novia" },
-      { title: "Clair de Lune", composer: "Claude Debussy", note: "Fondo" },
-    ],
-  },
-  {
-    id: "otros",
-    label: "Concierto / Otros",
-    intro: "Piezas para conciertos, presentaciones y eventos especiales.",
-    tracks: [
-      { title: "España Cañí", composer: "Pascual Marquina" },
-      { title: "Granada", composer: "Agustín Lara" },
-      { title: "Adagio de Albinoni", composer: "Tomaso Albinoni" },
-      { title: "Nessun Dorma", composer: "Giacomo Puccini" },
-      { title: "La Traviata — Brindis", composer: "Giuseppe Verdi" },
+      { title: "Marcha Nupcial", composer: "Wagner" },
+      { title: "Marcha Nupcial", composer: "Mendelssohn" },
+      { title: "Canon en Re Mayor", composer: "Pachelbel" },
+      { title: "Air on the G String", composer: "Bach" },
+      { title: "Largo", composer: "Haendel" },
+      { title: "Gabriel's Oboe", composer: "Morricone" },
+      { title: "Hallelujah", composer: "Leonard Cohen" },
+      { title: "Perfect", composer: "Ed Sheeran" },
+      { title: "Méditation de Thaïs", composer: "Massenet" },
+      { title: "Ave María", composer: "Schubert" },
+      { title: "Ave María", composer: "Gounod-Bach" },
+      { title: "Oda a la Alegría", composer: "Beethoven" },
+      { title: "Viva la Vida", composer: "Coldplay" },
+      { title: "La Primavera", composer: "Vivaldi" },
+      { title: "Eine kleine Nachtmusik — I mov.", composer: "Mozart" },
     ],
   },
 ];
 
 export default function Repertorio() {
-  const [active, setActive] = useState("procesiones");
+  const [active, setActive] = useState("cofrade");
 
   const current = tabs.find((t) => t.id === active)!;
 
@@ -109,18 +94,17 @@ export default function Repertorio() {
         <div className="flex flex-wrap gap-2 mb-10 border-b border-[#b8963e]/20 pb-0">
           {tabs.map((tab) => (
             <button
+              type="button"
               key={tab.id}
               onClick={() => setActive(tab.id)}
-              className={`px-5 py-3 text-xs tracking-widest uppercase transition-all duration-200 relative ${
+              style={{ touchAction: "manipulation" }}
+              className={`px-5 py-3 text-xs tracking-widest uppercase transition-colors duration-200 cursor-pointer border-b-2 ${
                 active === tab.id
-                  ? "text-[#b8963e]"
-                  : "text-[#4a3f35] hover:text-[#b8963e]"
+                  ? "text-[#b8963e] border-[#b8963e]"
+                  : "text-[#4a3f35] border-transparent hover:text-[#b8963e]"
               }`}
             >
               {tab.label}
-              {active === tab.id && (
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#b8963e]" />
-              )}
             </button>
           ))}
         </div>
@@ -131,9 +115,9 @@ export default function Repertorio() {
             {current.intro}
           </p>
           <div className="grid sm:grid-cols-2 gap-px bg-[#b8963e]/10">
-            {current.tracks.map((track) => (
+            {current.tracks.map((track, i) => (
               <div
-                key={track.title}
+                key={`${active}-${i}`}
                 className="bg-[#faf7f2] px-6 py-5 flex justify-between items-center hover:bg-white transition-colors duration-200"
               >
                 <div>

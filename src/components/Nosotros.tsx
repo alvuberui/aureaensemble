@@ -1,7 +1,6 @@
 const stats = [
   { number: "6", label: "Músicos" },
-  { number: "+50", label: "Obras en repertorio" },
-  { number: "+100", label: "Actuaciones" },
+  { number: "34", label: "Obras en repertorio" },
 ];
 
 export default function Nosotros() {
@@ -62,22 +61,14 @@ export default function Nosotros() {
             </div>
           </div>
 
-          {/* Visual placeholder */}
+          {/* Photo */}
           <div className="relative">
-            <div className="aspect-[4/3] bg-[#1a1612] flex flex-col items-center justify-center gap-6 border border-[#b8963e]/20">
-              <div className="grid grid-cols-3 gap-4 text-4xl">
-                {["🎷", "🎷", "🎷", "🎺", "🎺", "🥁"].map((icon, i) => (
-                  <span
-                    key={i}
-                    className="flex items-center justify-center w-14 h-14 border border-[#b8963e]/30 text-2xl"
-                  >
-                    {icon}
-                  </span>
-                ))}
-              </div>
-              <p className="text-white/30 text-xs tracking-widest uppercase text-center px-8">
-                Añade aquí una fotografía del ensemble
-              </p>
+            <div className="aspect-[4/3] overflow-hidden">
+              <img
+                src="/nosotros.jpeg"
+                alt="Aurea Ensemble"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Decorative corner */}
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-r-2 border-b-2 border-[#b8963e]/40" />

@@ -27,21 +27,17 @@ export default function Navbar() {
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-[#1a1612]/95 backdrop-blur-sm shadow-lg"
-          : "bg-transparent"
+          : "bg-gradient-to-b from-black/50 to-transparent"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#inicio" className="flex flex-col leading-none select-none">
-          <span
-            className="font-serif text-xl font-semibold tracking-[0.3em] text-[#b8963e]"
-            style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-          >
-            AUREA
-          </span>
-          <span className="text-[9px] tracking-[0.5em] text-white/70 font-light uppercase">
-            Ensemble
-          </span>
+        <a href="#inicio" className="flex items-center select-none">
+          <img
+            src="/Logo_Aurea.png"
+            alt="Aurea Ensemble"
+            className="h-10 w-auto"
+          />
         </a>
 
         {/* Desktop links */}
@@ -68,18 +64,20 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setOpen(!open)}
+          type="button"
+          className="md:hidden flex flex-col gap-1.5 p-3 cursor-pointer"
+          onClick={() => setOpen((prev) => !prev)}
           aria-label="Toggle menu"
+          style={{ touchAction: "manipulation" }}
         >
           <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-200 ${open ? "rotate-45 translate-y-2" : ""}`}
+            className={`block w-6 h-0.5 bg-white transition-all duration-200 origin-center ${open ? "rotate-45 translate-y-2" : ""}`}
           />
           <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-200 ${open ? "opacity-0" : ""}`}
+            className={`block w-6 h-0.5 bg-white transition-all duration-200 ${open ? "opacity-0 scale-x-0" : ""}`}
           />
           <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-200 ${open ? "-rotate-45 -translate-y-2" : ""}`}
+            className={`block w-6 h-0.5 bg-white transition-all duration-200 origin-center ${open ? "-rotate-45 -translate-y-2" : ""}`}
           />
         </button>
       </nav>
