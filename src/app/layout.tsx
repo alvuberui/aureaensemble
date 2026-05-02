@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   title: "Aurea Ensemble — Música para cada momento",
   description:
     "Ensemble musical de viento y percusión especializado en actos litúrgicos, procesiones, pregones, traslados, vía crucis y bodas. Saxo soprano, alto, tenor, trombón, tuba y caja.",
+  icons: {
+    icon: "/Logo_Aurea.png",
+    shortcut: "/Logo_Aurea.png",
+    apple: "/Logo_Aurea.png",
+  },
   keywords: [
     "ensemble musical",
     "música procesional",
