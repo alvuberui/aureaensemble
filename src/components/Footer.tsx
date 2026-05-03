@@ -45,10 +45,14 @@ export default function Footer() {
       </div>
     </footer>
 
-    <div className="fixed bottom-4 right-4 z-40 pointer-events-none">
-      <p className="text-[10px] tracking-wide text-white/70 bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full">
+    <div className="fixed bottom-4 right-4 z-40">
+      <a
+        href="https://alvaroubedaruiz.vercel.app/"
+        className="block text-[10px] tracking-wide text-white/70 bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full transition-colors duration-200 hover:text-[#b8963e]"
+        aria-label="Visitar la web de Álvaro Úbeda Ruiz"
+      >
         Desarrollado por Álvaro Úbeda Ruiz · 2026
-      </p>
+      </a>
     </div>
     </>
   );
