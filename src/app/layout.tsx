@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Ensemble musical de viento y percusión especializado en actos litúrgicos, procesiones, pregones, traslados, vía crucis y bodas. Saxo soprano, alto, tenor, trombón, tuba y caja.",
   verification: {
-    google: "yPcRYkz5aGOWNYv2-lvcgrdsaqHIJEVmShbR0YhHGQQ",
+    google: "DbWMLi42QwCjiTNY0LH4RHRtfD_At5QUtcOzKrro8tM",
   },
   icons: {
     icon: "/Logo_Aurea.png",
